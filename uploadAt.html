@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章上传</title>
+    <link rel="styleSheet" href="css/form.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!-- 导航部分 -->
+    <div class="menu-bar">
+        <h1 class="logo">皮卡皮卡<span>博客.</span></h1>
+        <ul>
+            <li><a href="home.html">首页</a></li>
+            <li><a href="#">日志</a></li>
+            <li><a href="#">文章 <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-menu">
+                    <ul> 
+                        <li><a href="uploadAt.html">文章上传</a></li>
+                        <li><a href="#">文章分类</a></li>
+                        <li><a href="#">技术分享</a></li>
+                        <li><a href="#">个人笔记</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">留言板</a></li>
+            <li><a href="picture.html">个人相册</a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <form  method="post" class="smart-green">
+            <label><span>文章标题 :</span>
+                <input id="title" type="text" name="title"  />
+            </label>
+            <label><span>作者 :</span>
+                <input id="keywords" type="text" value="" name="keywords" />
+            <label><span>文章类型 :</span>
+               <select name="" id="">
+                    <option value="null" disabled selected>---请选择文章类型---</option>
+                    <option value="技术类" >技术类</option>
+                    <option value="感悟类" >感悟类</option>
+               </select>  
+            
+            <label><span>文章内容|摘要 :</span>
+                <textarea id="description" name="description"></textarea>
+            <label><span>文章封面图片上传 :</span><input type="file" name="" id="">
+            <label><span>&nbsp;</span><input type="submit" class="button" value="确定" /></label>
+            <input type="hidden"   />
+        </form>
+    </div>
+     <!-- 页脚 -->
+     <div class="footer">
+    </div>
+</body>
+</html>

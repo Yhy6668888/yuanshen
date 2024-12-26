@@ -1,0 +1,87 @@
+.msgbox {
+    width: 70vw;
+    height: 60vh;
+    margin: 60px auto;
+    position: relative;
+    overflow: hidden;
+    background: none; /* 去除原有背景 */
+    background-image: url('../bgImg/bg5.jpg');
+    background-size: cover; /* 确保背景图像覆盖整个容器 */
+    background-repeat: no-repeat; /* 防止背景图像重复 */
+}
+
+.msgbox .msgItems {
+    background-color: rgba(255, 255, 255, 0.7); /* 调整透明度以融入背景 */
+    backdrop-filter: blur(5px); /* 添加模糊效果，使背景图像透过留言框 */
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    opacity: 0; /* 初始透明度为0 */
+    transition: opacity 1s, transform 1s; /* 添加透明度和缩放动画 */
+    transform: translateY(20px); /* 初始位置在下方 */
+    position: absolute; /* 绝对定位 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+    /* 其他样式保持不变 */
+    animation: fadeIn 1s ease forwards; /* 所有留言项逐渐显现 */
+}
+
+.msgbox .msgItems img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.msgbox .msgItems span {
+    display: inline-block;
+    margin-left: 10px;
+    line-height: 30px;
+    height: 30px;
+    letter-spacing: 3px;
+    color: #333; /* 调整文字颜色以提高可读性 */
+}
+
+/* 为每个留言项添加特定的位置和不同的动画延迟 */
+.msgbox .msgItems:nth-child(1) { left: 5vw; top: 2vh; color: pink; animation-delay: 0.2s; }
+.msgbox .msgItems:nth-child(2) { left: 20vw; top: 6vh; animation-delay: 0.4s; }
+.msgbox .msgItems:nth-child(3) { left: 36vw; top: 4vh; color: purple; animation-delay: 0.6s; }
+.msgbox .msgItems:nth-child(4) { left: 50vw; top: 1vh; width: 400px; color: darkcyan; animation-delay: 0.8s; }
+.msgbox .msgItems:nth-child(5) { left: 8vw; top: 30vh; color: red; animation-delay: 1.0s; }
+.msgbox .msgItems:nth-child(6) { left: 35vw; top: 40vh; width: 250px; color: orange; animation-delay: 1.2s; }
+.msgbox .msgItems:nth-child(7) { left: 68vw; top: 25vh; color: springgreen; animation-delay: 1.4s; }
+.msgbox .msgItems:nth-child(8) { left: 48vw; top: 50vh; width: 400px; color: lightseagreen; animation-delay: 1.6s; }
+.msgbox .msgItems:nth-child(9) { left: 28vw; top: 50vh; color: lightsalmon; animation-delay: 1.8s; }
+.msgbox .msgItems:nth-child(10) { left: 2vw; top: 50vh; width: 320px; animation-delay: 2.0s; }
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.msgbox form input[type="submit"] {
+    background-color: rgba(255, 255, 255, 0.5); /* 调整透明度 */
+    backdrop-filter: blur(5px); /* 添加模糊效果 */
+    color: #333; /* 确保文字颜色与背景协调 */
+    border: none; /* 去除边框 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* 添加背景颜色和缩放动画 */
+}
+
+.msgbox form input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* 鼠标悬停时增加透明度 */
+    transform: scale(1.05); /* 鼠标悬停时轻微放大 */
+}

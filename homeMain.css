@@ -1,0 +1,195 @@
+/* 默认样式清除 */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* 主体样式 */
+.main-box{
+    width: 70vw;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 左右盒子布局 */
+
+/* leftbox */
+.lt-box{
+    width: 45vw;
+    height: auto;
+
+}
+/* 左侧文章盒子 */
+.lt-box .article{
+    width: 45vw;
+    background-color: white;
+    height: 70vh;
+    border-radius: 30px;
+    padding: 1%;
+    margin-bottom:3vh;
+}
+/* 文章盒子图片 */
+.lt-box .article img{
+    width: 44vw;
+    height: 50vh;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+/* 文章标题 */
+.lt-box .article h3{
+    width: 44vw;
+    height: 3vh;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+.lt-box .article p{
+    width: 44vw;
+    height: 15vh;
+    letter-spacing: 3px;
+    overflow: hidden;
+    border-bottom-left-radius:30px ;
+    border-bottom-right-radius:30px ;
+    font-size: 18px;
+}
+/* right box */
+.rt-box{
+    width:20vw ;
+}
+
+/* 右侧小分类 个人功能模块*/
+.rt-box .person{
+    width:20vw ;
+    background-color: white;
+    height: 30vh;
+    border-radius: 20px;
+    position: relative;
+}
+.rt-box .person .circle{
+    position: absolute;
+    top:3vh;
+    width: 6vw;
+    height: 12vh;
+    left: 7vw;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+.rt-box .person .circle>img{
+    width: 6vw;
+    height: 12vh;
+    border-radius: 50%;
+}
+.rt-box .person .prList{
+    position: absolute;
+    top:17vh;
+    display: flex;
+    height: 6vh;
+    width: 19vw;
+    left: 0.5vw;
+    justify-content: space-between;
+}
+.rt-box .person .prList>p{
+    width: 6vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;  
+    border-radius: 5px;
+    background-color: cornflowerblue;
+}
+.rt-box .person .prList p a{
+    flex: 1;
+    display: block;
+    cursor: pointer;
+}
+
+.rt-box .person>a{
+    display: block;
+    width: 19vw;
+    height: 30px;
+    left: 0.5vw;
+    position: absolute;
+    background-color: aquamarine;
+    bottom: 10px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* 超链接模块 */
+.rt-box .linkList{
+    margin-top: 4vh;
+    width:20vw ;
+    background-color: white;
+    height: 20vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    /* 弹性伸缩盒子换行 */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+}
+.rt-box .linkList>p{
+    width: 3.7vw;
+    height: 7.4vh;
+    background-color: lightskyblue;
+    margin:2%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.rt-box .linkList p>img{
+    width: 3.7vw;
+    height: 7.4vh;
+    border-radius: 8px;
+}
+
+/* 侧边导航菜单栏 */
+.menuList{
+    margin-top: 4vh;
+    width: 20vw;
+    padding: 2%;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 1s linear;
+}
+
+.menuList .menuItem{
+    width: 19vw;
+    background-color: lightskyblue;
+    height: 6vh;
+    border-radius: 8px;
+    margin: 2.5px 0;
+    cursor: pointer;
+    line-height: 6vh;
+    text-align: left;
+    text-indent: 20px;
+    font-size: 20px;
+}
+.menuList .menuItem:hover{
+    background-color: #eee;
+}
+
+.menuList .activeItems{
+    background-color: #eee; 
+}
+
+/* 文章侧边栏扩展预备样式 */
+.menuList .extendList{
+    width: 19vw;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 1s linear;
+    line-height: 6vh;
+    text-align: left;
+    text-indent: 20px;
+    font-size: 20px;
+    display: none;
+}

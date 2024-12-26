@@ -1,0 +1,200 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面主体背景样式及字体通用设置 */
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to left bottom, lightskyblue 50%, lightpink 50%);
+  background-image: url('../bgImg/bg5.jpg');
+  background-blend-mode: multiply; /* 让背景图片与渐变背景融合 */
+  background-size: cover;
+  color: white; /* 初始文字颜色设为白色，便于后续渐变效果呈现 */
+  animation: textColorChange 5s infinite linear; /* 添加文字颜色渐变动画 */
+}
+
+/* 标题 logo 样式 */
+.logo {
+  color: #141d28;
+  font-size: 30px;
+  margin-right: 100px;
+}
+
+.logo span {
+  color: #0073ff;
+}
+
+/* 导航栏整体样式 */
+.menu-bar {
+  background-color: rgba(255, 255, 255, 0.3); /* 半透明背景，使其与整体背景融合 */
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  border-bottom: 2px #eee solid;
+}
+
+/* 导航栏列表样式 */
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-bar ul li {
+  padding: 10px 30px;
+  position: relative;
+}
+
+.menu-bar ul li a {
+  font-size: 20px;
+  color: inherit; /* 继承父元素（body）的文字颜色，跟随文字渐变效果 */
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.menu-bar ul li a:hover {
+  color: #0073ff;
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+  display: none;
+}
+
+.menu-bar ul li:hover.dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明背景，与整体融合 */
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.menu-bar ul li:hover.dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+.menu-bar ul li:hover.dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+
+/* 文章盒子样式 */
+.article {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* 半透明背景，与整体融合 */
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.article img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.article h3 {
+  margin-bottom: 10px;
+}
+
+/* 右侧栏个人菜单样式 */
+.person {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prList p {
+  margin-bottom: 5px;
+}
+
+.prList p a {
+  color: inherit; /* 继承文字颜色，跟随渐变效果 */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* 超链接菜单列表样式 */
+.linkList p {
+  margin-bottom: 10px;
+}
+
+.linkList p img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 侧边导航菜单栏样式 */
+.menuList {
+  margin-bottom: 20px;
+}
+
+.menuItem {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.activeItems {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.extendList {
+  display: none;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* 文字颜色渐变动画关键帧定义 */
+@keyframes textColorChange {
+  0% {
+      color: #fff; /* 起始白色 */
+  }
+  25% {
+      color: lightblue;
+  }
+  50% {
+      color: lightpink;
+  }
+  75% {
+      color: lavender;
+  }
+  100% {
+      color: #fff; /* 结束白色，形成循环 */
+  }
+}
